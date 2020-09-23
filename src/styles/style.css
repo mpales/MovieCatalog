@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+  
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#010101;
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    width: 90%;
+    margin: 20px auto;
+}
+header-item > .carousel-caption {
+  color: black;
+}
+
+movie-list {
+    display: grid;
+    margin-top: 24px;
+    width: 100%;
+    padding: 16px;
+    grid-auto-rows: 300px;
+ }
+
+movie-list > .placeholder {
+    font-weight: lighter;
+    color: rgba(0,0,0,0.5);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+ movie-item {
+   display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #24215e;
+ }
+  
+ movie-item .movie-poster {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    color: white;
+    font-size: 62px;
+    line-height: 56px;
+    font-weight: bold;
+ }
+
+ .movie-info {
+    padding: 18px;
+ }
+  
+ .movie-info > h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+ }
+  
+ .movie-info > p {
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7; /* number of lines to show */
+    font-size: 13;
+    color: white;
+ }
+
+ @media only screen and (min-width: 800px) {
+   main {
+      width: 98%;
+   }
+    movie-list {    
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .movie-info > p {
+        font-size: 14px;
+     }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    movie-list {    
+     grid-template-columns: repeat(3, 1fr); 
+    }
+    .movie-info > p {
+        font-size: 16px;
+     }
+  }
+
+  @media only screen and (max-width: 600px) {
+   movie-list {
+     grid-auto-rows: 240px;
+   }
+   .movie-info > p, .movie-info > h5 {
+       font-size: 12px;
+    }
+    main {
+      width: 99%;
+      margin: 5px auto;
+    }
+    movie-item {
+      margin-right: 0;
+    }
+    movie-item .movie-poster {
+      font-size: 35px;
+      line-height: 32px;
+   }
+ }
