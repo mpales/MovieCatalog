@@ -1,6 +1,6 @@
-const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
+const path = require("path");
 
 module.exports = {
     entry: "./src/app.js",
@@ -15,22 +15,21 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     {loader: "style-loader"},
-                    {loader: "css-loader"}
-                ]
+                    {loader: "css-loader"},
+                ],
             }
         ]
     },
-        /* plugin */
-        plugins: [
-            /* HTML Webpack Plugin */
-            new HtmlWebpackPlugin({
-                template: "./src/index.html",
-                filename: "index.html"
-            }),
-            new webpack.ProvidePlugin({
-                $: 'jquery',
-                jQuery: 'jquery',
-                'window.jQuery': 'jquery'
-              }),
-        ]
-    }
+    plugins: [
+        /* HTML Webpack Plugin */
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+            filename: "index.html"
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        }),
+    ]
+}

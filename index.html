@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoCat</title>
+</head>
+<body>
+  <header>
+    <app-bar></app-bar>
+    <div class="carousel-container">
+    <div id="myCarousel-now" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <now-playing></now-playing>
+      <a class="carousel-control-prev" href="#myCarousel-now" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+      <a class="carousel-control-next" href="#myCarousel-now" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+    </div>
+    </div>
+    <nav>
+      <article class="up"><p>Upcoming</p></article>
+      <article class="pop"><p>What's Popular</p></article>
+      <article class="top"><p>Top Rated Movies</p></article>
+    </nav>
+    <div class="carousel-containers">
+    <div id="myCarousel-up" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <upcoming-movie></upcoming-movie>
+      <a class="carousel-control-prev" href="#myCarousel-up" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+      <a class="carousel-control-next" href="#myCarousel-up" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+    </div>
+    <div id="myCarousel-pop" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <popular-movie></popular-movie>
+      <a class="carousel-control-prev" href="#myCarousel-pop" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+      <a class="carousel-control-next" href="#myCarousel-pop" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+    </div>
+    <div id="myCarousel-top" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <top-rated></top-rated>
+      <a class="carousel-control-prev" href="#myCarousel-top" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+      <a class="carousel-control-next" href="#myCarousel-top" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+    </div>
+    </div>
+  </header>
+  <main>
+    <movie-list></movie-list>
+  </main>
+  <footer>
+    <p>&copy Copyright 2020. All Rights Reserved | Developed without Framework.</p>
+  </footer>
+</body>
+</html>
+    
